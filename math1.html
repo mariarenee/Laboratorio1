@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Num_Primo</title>
+	<FORM class="numero">
+	<div><label>Introduzca un numero:</label>
+	<input type="text" id="xx" size="5px"></div>
+	<div><input name="Verificar" type="button" onclick="primo(parseInt(document.getElementById('xx').value))" value="Verificar" /> </div>
+	</FORM>
+	<script type="text/javascript">
+		function primo(num)
+		{
+
+			var primo=true;
+			for(i=2;i<num;i++)
+			{
+				if(num%i==0)
+				{
+					primo=false
+				}
+			}
+			if(primo)
+			{
+				alert('Es un numero primo')
+			}
+			else
+			{
+				alert('No es un numero primo')
+			}
+		}
+	</script>
+
+</head>
+<style>
+        *{
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+        form.numero{
+            background: none repeat scroll 0 0 #C71585;    
+            margin: 0 auto;
+            padding: 20px;
+            width: 210px;
+            box-shadow:0px 0px 20px black; 
+            border-radius:10px; 
+            position:relative;
+            top:30px;
+        }
+        form.numero div {
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        form.numero div label {
+            display: block;
+            line-height: 25px;
+        }
+        form.numero div input[type="button"]
+        {
+            background:#FFB6C1;
+            margin-bottom: 1px;
+            float: left;
+            padding: 5px;
+
+        }
+</style> 
+<body>
+</body>
+</html>
+
