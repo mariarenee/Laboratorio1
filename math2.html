@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ECUACIONES DE SEGUNDO GRADO</title>
+	<link rel="stylesheet" type="text/css" href="Css\Styles.css">
+	<FORM class="ecuacion"  >
+	<div><input type="text" id="a" size="2px"> 
+	<label>X2:</label> </div>
+    <div><input type="text" id="b" size="2px">
+	<label>X:</label></div>
+
+    <div><input type="text" id="c" size="2px"></div>
+	<div><input name="Verificar" type="button" onclick="Resolver()" value="CALCULAR" /> </div>
+	</FORM>
+	<script type="text/javascript">
+		function Resolver()
+		{
+			var a = parseInt(document.getElementById('a').value); 
+	       	var b = parseInt(document.getElementById('b').value); 
+	        var c = parseInt(document.getElementById('c').value); 
+			var raiz=parseFloat(b*b-4*a*c);
+			if(raiz<0)
+			{
+				alert("NO TIENE SOLUCION");
+			}
+			else
+			{
+			var x1 = ((-b)+(Math.sqrt(raiz)))/(2*a);
+	        var x2 = ((-b)-(Math.sqrt(raiz)))/(2*a);
+	        alert("RSPTA: \n x1: "+ x1 +"\n x2: "+ x2);
+	 		}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
